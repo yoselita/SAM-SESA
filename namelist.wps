@@ -1,0 +1,41 @@
+ &share
+ wrf_core = 'ARW',
+ max_dom = 1,
+ start_date = '2019-06-01_00:00:00',
+ end_date   = '2019-07-01_00:00:00',
+ interval_seconds = 21600
+ io_form_geogrid = 2,
+ /
+
+ &geogrid
+ parent_id        	= 1,    
+ parent_grid_ratio 	= 1,    
+ i_parent_start    	= 1,   
+ j_parent_start    	= 1,   
+ e_we			= 760,
+ e_sn       		= 563, 
+ geog_data_res     	= '30s+default',
+ dx 		   	= 0.036666, !0.04
+ dy 		   	= 0.036666, !0.04
+ map_proj 	   	= 'lat-lon',
+ ref_y 		 	= 541,
+ ref_x 			= 22, 
+ ref_lat   	   	= -15.9069,
+ ref_lon   	   	= -75.0853,
+ pole_lat    	   	= 70.6,
+ pole_lon  	   	= -56.06,
+ stand_lon 	   	= -123.94,
+ geog_data_path    	= '/mnt/lustre/scratch/nlsas/home/csic/mym/jmi/WPS-GEOG/',
+ /
+
+ &ungrib
+ out_format = 'WPS',
+ prefix = 'FILE',
+ /
+
+ &metgrid
+ constants_name = 'TAVGSFC'
+ fg_name = 'FILE'
+ io_form_metgrid = 2, 
+ !constants_name = 'QNWFA_QNIFA_SIGMA_MONTHLY.dat'
+ /           
