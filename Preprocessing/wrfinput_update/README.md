@@ -15,4 +15,4 @@ so that the script can read the projection data correctly.
 
 Then, the extracted soil data from wrfout, after getting the projection info (with read_grid.py) are remapped to the wrfinput grid using the cdo commands given directly in the main_script.sh (1st order conservation remapping)
 
-**soil2wrfinput.ncl** - a small script used at the end, that updates the soil data (SMOIS, TSLB, and SH20) in the wrfinput file fro the given wrfout file.
+**soil2wrfinput.ncl** - a small script used at the end, that updates the soil data (SMOIS, TSLB, and SH20) in the wrfinput file from the given wrfout file from the longterm run.
