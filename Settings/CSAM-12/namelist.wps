@@ -1,0 +1,41 @@
+&share
+ wrf_core = 'ARW',
+ max_dom = 1,
+ start_date = '2018-05-25_00:00:00',
+ end_date   = '2018-06-30_18:00:00',
+ interval_seconds = 21600
+ io_form_geogrid = 2,
+ nocolons = .true.,
+/
+
+&geogrid
+ parent_id        	= 1,    
+ parent_grid_ratio 	= 1,    
+ i_parent_start    	= 1,   
+ j_parent_start    	= 1,   
+ e_we			= 295,
+ e_sn       		= 229, 
+ geog_data_res     	= '30s+default',
+ dx 		   	= 0.11 !0.036666, !0.04
+ dy 		   	= 0.11 !0.036666, !0.04
+ map_proj 	   	= 'lat-lon',
+ ref_y 		 	= 201,
+ ref_x 			= 28, 
+ ref_lat   	   	= -15.9069,
+ ref_lon   	   	= -75.0853,
+ pole_lat    	   	= 70.6,
+ pole_lon  	   	= -56.06,
+ stand_lon 	   	= -123.94,
+ geog_data_path    	= '/gpfs/projects/meteo/WORK/josipa/CMIP6toWRF/WPS_GEOG/',
+/
+
+&ungrib
+ out_format = 'WPS',
+ prefix = 'FILE',
+/
+
+&metgrid
+ constants_name = 'TAVGSFC'
+ fg_name = 'FILE'
+ io_form_metgrid = 2, 
+/ 
