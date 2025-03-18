@@ -1,5 +1,5 @@
 
-The folder contains files:
+The folders CSAM-4 and CSAM-12 contains the setting files for CSAM domains at 4 and 12 km grids, respectively:
 
 1. namelist.wps is used to run WPS. 
 
